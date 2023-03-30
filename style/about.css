@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: "Roboto" !important;
+}
+
+:root {
+  --yellow: #FFCF53;
+  --black: #484848;
+  --pink: #E43C78;
+}
+
+.splash {
+  height: 100vh;
+  background: var(--yellow);
+}
+
+.title span:nth-child(1) {
+  color: var(--yellow);
+}
+
+.title span:nth-child(2) {
+  color: var(--black);
+}
+
+nav ul li a {
+  color: var(--black);
+}
+
+nav ul li .border-2 {
+  color: var(--yellow);
+  border-color: var(--yellow) !important;
+}
+
+.btn {
+  border: 1px solid #484848 !important;
+}
+
+main {
+  height: 100vh !important;
+}
+
+button {
+  background: var(--yellow);
+}
+
+.preBackEndDevWrapper {
+  background: var(--yellow);
+}
+
+main section:nth-child(1) img {
+  height: 100vh;
+  object-fit: cover;
+}
+
+main section:nth-child(2) {
+  background-image: url("../assets/Sprinkle\ \(2\).svg");
+}
+
+main section:nth-child(2) div:nth-child(1) h1:nth-child(1) {
+  color: var(--yellow);
+  font-family: "Lora" !important;
+  color: var(--yellow);
+}
+
+main section:nth-child(2) div:nth-child(1) h1:nth-child(2) {
+  color: var(--yellow);
+  font-family: "Lora" !important;
+  color: var(--black);
+}
+
+main section:nth-child(2) div:nth-child(2) .sameBorder {
+  border-color: var(--black) !important;
+  color: var(--black);
+}
+
+main section:nth-child(2) div:nth-child(3) p {
+  font-family: "Lora" !important;
+}
+
+main section:nth-child(2) div:nth-child(3) p span {
+  font-family: "Lora" !important;
+  color: var(--pink);
+}
+
+main section:nth-child(2) div:nth-child(4) a .icon {
+  color: var(--black);
+}
+
+@media (max-width: 991px) {
+  header {
+    top: 0;
+    left: -350px !important;
+    width: 350px !important;
+    height: 100vh !important;
+    transition: 0.5s;
+  }
+
+  header .contactWrapper {
+    position: fixed;
+    bottom: 20px;
+  }
+
+  header nav ul li a {
+    font-size: 17px !important;
+  }
+
+  nav ul li:nth-child(2) {
+    color: var(--yellow);
+  }
+
+  .humbergerWrapper {
+    z-index: 100;
+    width: 50px;
+    height: 40px;
+    background: rgb(43, 43, 43);
+    top: 23px;
+    left: 30px;
+    transition: 0.5s;
+  }
+
+  .humberger {
+    width: 38px;
+    height: 3px;
+    background: white;
+    transition: 0.5s;
+  }
+
+  .humberger::after,
+  .humberger::before {
+    content: "";
+    border-radius: 100px !important;
+    width: 38px;
+    height: 3px;
+    background: rgb(219, 219, 219);
+    position: absolute;
+  }
+
+  .humberger::after {
+    transform: translateY(-10px);
+  }
+
+  .humberger::before {
+    transform: translateY(10px);
+  }
+
+  body.sidebarOn header {
+    left: 0 !important;
+    transition: 0.5s;
+  }
+
+  body.sidebarOn .humbergerWrapper {
+    left: 280px;
+    background: transparent;
+  }
+
+  body.sidebarOn .humberger {
+    background: var(--black);
+    background: transparent;
+    transition: 0.5s;
+  }
+
+  body.sidebarOn .humberger::after {
+    background: var(--black);
+    transform: rotate(45deg);
+    transition: 0.5s;
+  }
+
+  body.sidebarOn .humberger::before {
+    background: var(--black);
+    transform: rotate(-45deg);
+    transition: 0.5s;
+  }
+
+  nav ul li:nth-child(2) a {
+    border: none !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .splash img {
+    width: 200px !important;
+  }
+
+  header {
+    width: 250px !important;
+    padding: 25px !important;
+  }
+
+  header .navbar {
+    display: flex;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+
+  header nav ul {
+    width: 200px !important;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    margin-top: 10px !important;
+    margin-left: 20px !important;
+  }
+
+  header nav ul li a {
+    margin-left: 10px !important;
+  }
+
+  body.sidebarOn .humbergerWrapper {
+    left: 190px;
+  }
+
+  main section:nth-child(1) {
+    display: none;
+  }
+
+  main section:nth-child(2) {
+    display: flex;
+  }
+}
+
+@media (max-width: 518px) {
+  .splash img {
+    width: 200px !important;
+  }
+
+  main section:nth-child(2) {
+    padding: 100px 5px !important;
+    align-items: start !important;
+  }
+
+  main section:nth-child(2) div h1 {
+    font-size: 2rem !important;
+  }
+
+  main section:nth-child(2) div h5 {
+    font-size: 14px !important;
+  }
+
+  main section:nth-child(2) div p {
+    font-size: 17px !important;
+  }
+
+  .icon {
+    width: 20px !important;
+  }
+}
